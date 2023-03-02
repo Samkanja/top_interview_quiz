@@ -1,0 +1,16 @@
+from typing import List
+
+def reverse_string(s:List[str]) -> List[str]:
+    """
+    Do not return anything, modify s in-place instead
+    """
+    l ,r  = 0,len(s) -1
+    while l < r:
+        s[l], s[r] = s[r], s[l]
+        l += 1
+        r -= 1
+
+    return s
+
+s = ['h','e','l','l','o']
+print(reverse_string(s))
